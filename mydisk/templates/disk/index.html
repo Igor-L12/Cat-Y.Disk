@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% block title %} Чек Я.Диск {% endblock %} {% block content %}
+<div class="d-flex justify-content-center align-items-center vh-100 text-white">
+	<div class="card bg-secondary shadow-lg border-0 p-4" style="max-width: 500px;">
+		<h2 class="text-center mb-4" style="font-family: 'Segoe UI', sans-serif; font-weight: bold;">Просмотр <span style="color: rgb(146, 3, 3);">Я</span>.Диска</h2>
+		<form method="POST">
+			{% csrf_token %}
+			<div class="mb-3">
+				<label for="public_key" class="form-label fw-bold">Ссылка</label>
+				<input type="text" id="public_key" name="public_key" class="form-control form-control-lg bg-dark text-white border-secondary" placeholder="Введите ссылку" required />
+			</div>
+			<div class="text-center">
+				<button type="submit" class="btn btn-lg btn-dark w-100 fw-bold text-white border-secondary">
+					Войти
+				</button>
+			</div>
+		</form>
+	</div>
+</div>
+{% endblock %}
+
+
